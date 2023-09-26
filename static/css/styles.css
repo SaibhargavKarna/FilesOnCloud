@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .full-page{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  
+/* Login */
+.login-page{
+    margin: 5px;
+    padding: 20px 20px 300px;
+    background-color: #85F4FF;
+  }
+  
+  .login-marquee-text{
+    width: 60%;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 50px auto 20px;
+  }
+  
+  #login-form,#uploads_form{
+    width:600px;
+    margin: auto;
+    padding: 20px 25px;
+    background-color: #EFFFFD;
+    border: 1px solid skyblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    align-items: center;
+  }
+  
+  #login-form input,#uploads_form input{
+    display: block;
+    width: 500px;
+    height: 30px;
+    font-size: 20px;
+    padding: 5px 10px;
+    margin: 0 20px;
+    border-radius: 5px;
+  }
+  
+  #login-form label,#uploads_form label{
+    display: block;
+    width: 500px;
+    height: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 0 20px;
+  }
+  
+  
+  #login-form button,#uploads_form button{
+    display: block;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    width: 520px;
+    height: 40px;
+    font-size: 20px;
+    margin: 20px;
+    border-radius: 5px;
+  }
+  
+  .register-option{
+    width: 500px;
+    height: 30px;
+    font-size: 20px;
+    padding: 5px 10px;
+    margin: 10px 20px;
+    text-align: center;
+  }
+  
+
+  .navbar{
+    height: 60px;
+    background-color: #007bff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    padding: 5px 100px;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  
+  .navbar a{
+    color: white;
+  }
+  
+  .user-welcome{
+    text-align: center;
+  }
+
+
+.success, .error{
+  height: 50px;
+  font-size: 20px;
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.success{
+  background-color: #51e49d;
+}
+
+.error{
+  background-color: rgb(254, 68, 68);
+}
+
+/* footer-section */
+.footer{
+  margin-top: auto;
+  padding: 20px;
+  color: black;
+  font-size: 22px;
+  background-color: #8EA7E9;
+}
+
+.footer a{
+  color: black;
+}
+ 
+.copyright{
+  padding: 20px 20px 0;
+  display: flex;
+  justify-content: space-evenly;
+}

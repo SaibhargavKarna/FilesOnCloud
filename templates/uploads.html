@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FilesOnCloud</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">  
+</head>
+<body>    
+    <div class="full-page">
+        <div class="page-content">
+            <div class="navbar">
+                <div class="nav-title">
+                    <a href="{% url 'uploads' %}">FilesOnCloud</a>            
+                </div>      
+                
+                <div class="logout-option">
+                    <a href="{% url 'logout' %}">{{request.user}} , Logout</a>
+                </div>
+            </div>
+
+            <div class="login-page">    
+                {% if messages %}
+                <div class="messages">  
+                    {% for message in messages %}              
+                    <div  {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</div> 
+                    {% endfor %}               
+                </div>
+                {% endif %}
+
+                <h2 class="user-welcome">Welcome... {{request.user}}!</h2>
+                <div class="login-marquee-text">
+                    <marquee behavior="" direction="left" scrollamount="15">Now you can upload your photos & files on cloud...</marquee>
+                </div> 
+                <form id="uploads_form" action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+                    {{form.as_p}}
+                    <button type="submit">Upload</button>
+                </form>          
+            </div>           
+        </div>  
+        
+        <div class="footer">            
+            <div class="copyright">
+                <p>©2023,<a href="{% url 'uploads' %}">FilesOnCloud</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>
